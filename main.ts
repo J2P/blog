@@ -3,8 +3,7 @@ import blog, { ga, redirects } from "https://deno.land/x/blog@0.1.0/blog.tsx";
 blog({
   title: "J2P blog",
   author: "J2P",
-  subtitle: "개발 블로그",
-  header: "This is my new blog",
+  header: "J2P blog",
   style: "body { padding: 32px 0; background-color: #f0f0f0; }",
 
   // middlewares: [
