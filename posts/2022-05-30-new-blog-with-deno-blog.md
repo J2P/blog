@@ -1,5 +1,5 @@
 ---
-title: "deno blog 로 변경하기"
+title: "Change my blog to deno blog"
 publish_date: "2022-05-30"
 snippet: "deno_blog 로 블로그를 변경하고 사용하는 방법"
 ---

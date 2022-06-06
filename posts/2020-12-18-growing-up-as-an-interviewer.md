@@ -1,5 +1,5 @@
 ---
-title: "면접관으로 성장하기"
+title: "Growing up as an interviewer"
 publish_date: "2020-12-18"
 snippet: "면접을 어떻게 진행할지에 대해서 고민했던 내용"
 ---
