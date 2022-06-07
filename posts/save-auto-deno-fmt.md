@@ -4,9 +4,7 @@ publish_date: "2022-06-06"
 snippet: "deno 프로젝트 파일들을 자동으로 코드정렬 해주는 방법"
 ---
 
-node 프로젝트는 보통 eslint 와 prettier 를 사용해서 코트 정렬과 오류를 잡아준다.
-
-deno 는 cli 에서 기본으로 fmt 명령어를 지원해서 따로 패키지 설치 없이 코드 정렬 오류를 수정해준다.
+deno 는 cli 에서 기본으로 fmt 명령어를 지원해서 따로 패키지 설치 없이 코드 정렬및 수정을 할 수 있다.
 
 ## 지원하는 파일
 
@@ -50,7 +48,7 @@ from /Users/sean/Github/deno_study/main.ts:
 error: Found 1 not formatted file in 5 files
 ```
 
-아래와 같이 명령어를 입력하면 main.ts 파일의 내용을 포멧팅해서 출력해 준다.
+아래와 같이 명령어를 입력하면 main.ts 파일의 내용을 수정해서 출력해 준다.
 
 ```bash
 $ cat main.ts | deno fmt -
@@ -58,7 +56,7 @@ $ cat main.ts | deno fmt -
 
 ## 특정 코드 또는 파일 무시 하는 방법
 
-코드를 작성하다 보면 특정 코드는 무시하고 싶은 경우들이 있다. 그런 경우 아래와 같이 코드 위에 작성해주면 해당 코드의 포멧팅은 무시를 한다.
+코드를 작성하다 보면 특정 코드는 무시하고 싶은 경우들이 있다. 그런 경우 아래와 같이 코드 위에 작성해주면 해당 코드를 무시 한다.
 ```ts
 // deno-fmt-ignore
 export const identity = [
@@ -93,7 +91,7 @@ console.log("log from main script");
 ```
 
 ## 설정 변경
-문서에는 아래와 같이 기본 옵션을 유지하는 좋다고 나와 있다.
+문서에는 아래와 같이 기본 옵션을 유지하는 것이 좋다고 나와 있다.
 
 | It is recommended to stick with default options.
 
@@ -137,7 +135,7 @@ console.log("log from main script");
 
 ## vscode 설정으로 파일 저장시 자동으로 포멧팅 하기
 
-위에서 알아본 방법은 cli 명령어를 항상 입력해야 하는 번거로움이 있다. 그래서 vscode 로 저장할 때 자동으로 포멧팅 하는 방법을 알아보자.
+위에서 알아본 방법은 cli 명령어를 항상 입력해야 하는 번거로움이 있다. 그래서 vscode 로 저장할 때 자동으로 수정하는 방법을 알아보자.
 
 ### .vscode 디렉토리 생성
 
@@ -149,7 +147,7 @@ console.log("log from main script");
 
 ### 설정 내용 추가
 
-아래 내용을 추가 해주면 저장할 때 deno fmt 명령어를 쓴것 처럼 자동으로 포맷팅을 해주면서 저장이 된다.
+아래 내용을 추가 해주면 저장할 때 deno fmt 명령어를 쓴것 처럼 자동으로 수정 해주면서 저장이 된다.
 
 ```js
 {
