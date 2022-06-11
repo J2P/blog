@@ -2,8 +2,8 @@ import blog, { ga } from "https://deno.land/x/blog@0.3.3/blog.tsx";
 
 blog({
   author: "J2P",
-  title: "My Blog",
-  description: "The blog description.",
+  title: "J2P Blog",
+  description: "I talk about development.",
   avatar: "avatar.jpg",
   avatarClass: "rounded-full",
   links: [
