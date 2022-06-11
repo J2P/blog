@@ -1,12 +1,17 @@
-import blog, { ga } from "https://deno.land/x/blog/blog.tsx";
+import blog, { ga } from "https://deno.land/x/blog@0.3.3/blog.tsx";
 
 blog({
-  title: "J2P blog",
   author: "J2P",
-  header: "J2P blog",
-  style: "body { padding: 32px 0; background-color: #f0f0f0; }",
-
+  title: "My Blog",
+  description: "The blog description.",
+  avatar: "avatar.jpg",
+  avatarClass: "rounded-full",
+  links: [
+    { title: "Email", url: "mailto:jjp5023@gmail.com" },
+    { title: "GitHub", url: "https://github.com/J2P" },
+    { title: "Twitter", url: "https://twitter.com/J2P_" },
+  ],
   middlewares: [
     ga("UA-158793596-1"),
-  ]
+  ],
 });
