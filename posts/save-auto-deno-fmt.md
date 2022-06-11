@@ -8,34 +8,38 @@ deno 는 cli 에서 기본으로 fmt 명령어를 지원해서 따로 패키지 
 
 ## 지원하는 파일
 
-| File Type |	Extension|
-|-----------|------------|
-JavaScript |	.js
-TypeScript |	.ts
-JSX	| .jsx
-TSX	| .tsx
-Markdown |	.md, .markdown
-JSON |	.json
-JSONC |	.jsonc
+| File Type  | Extension      |
+| ---------- | -------------- |
+| JavaScript | .js            |
+| TypeScript | .ts            |
+| JSX        | .jsx           |
+| TSX        | .tsx           |
+| Markdown   | .md, .markdown |
+| JSON       | .json          |
+| JSONC      | .jsonc         |
 
 ## 명령어 사용 방법
 
 프로젝트 폴더에서 아래와 같이 명령어를 입력하면 현재 프로젝트에 있는 모든 파일들을 검사하고 수정한다.
+
 ```bash
 $ deno fmt
 ```
 
 아래와 같이 fmt 명령어 뒤에 파일명을 지정하면 해당 파일만 검사하고 수정한다.
+
 ```bash
 $ deno fmt myfile1.ts myfile2.ts
 ```
 
 아래와 같이 fmt 명령어 뒤에 디렉토리를 지정하면 해당 디렉토리에 있는 모든 파일을 검사하고 수정한다.
+
 ```bash
 $ deno fmt src/
 ```
 
 아래와 같이 fmt 명령어 뒤에 --check 옵션을 주면 아래와 같이 수정해야 할 파일을 찾아서 내용을 보여준다.
+
 ```bash
 $ deno fmt --check
 
@@ -57,6 +61,7 @@ $ cat main.ts | deno fmt -
 ## 특정 코드 또는 파일 무시 하는 방법
 
 코드를 작성하다 보면 특정 코드는 무시하고 싶은 경우들이 있다. 그런 경우 아래와 같이 코드 위에 작성해주면 해당 코드를 무시 한다.
+
 ```ts
 // deno-fmt-ignore
 export const identity = [
@@ -67,6 +72,7 @@ export const identity = [
 ```
 
 파일 전체를 무시하고 싶은 경우는 아래와 같이 파일 상단에 작성해준다.
+
 ```ts
 // deno-fmt-ignore-file
 import "./imported.ts";
@@ -91,6 +97,7 @@ console.log("log from main script");
 ```
 
 ## 설정 변경
+
 문서에는 아래와 같이 기본 옵션을 유지하는 것이 좋다고 나와 있다.
 
 | It is recommended to stick with default options.

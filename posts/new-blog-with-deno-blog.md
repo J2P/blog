@@ -24,11 +24,11 @@ $ deno run https://deno.land/x/blog/init.ts [디렉토리 이름]
 
 `posts` 디렉토리에 마크다운 파일을 추가해서 포스트를 추가할 수 있다.
 
-`main.ts` 파일에는 블로그에 대한 기본 설정을 할 수 있다.
-아래와 같이 title, author, subtitle, header, style, middlewares 설정이 가능하다.
-middlewares 에는 google analytics, redirects 설정이 가능하다.
+`main.ts` 파일에는 블로그에 대한 기본 설정을 할 수 있다. 아래와 같이 title, author, subtitle, header,
+style, middlewares 설정이 가능하다. middlewares 에는 google analytics, redirects 설정이
+가능하다.
 
-``` js
+```js
 {
   title: "My blog",
   author: "J2P",
@@ -64,6 +64,7 @@ $ deno task dev
 ```
 
 실제로 실행되는 명령어는 `deno.jsonc` 파일에 있는 task 가 아래와 같이 실행이 된다.
+
 ```bash
 $ deno run --allow-net --allow-read --no-check --watch main.ts --dev
 Warning deno task is unstable and may drastically change in the future
@@ -88,7 +89,8 @@ publish_date: "2022-05-30"
 
 ### Deploy with deno deploy
 
-[deno deploy projects](https://dash.deno.com/projects) 페이지에서 `+ New Project` 버튼을 눌러서 새로운 프로젝트를 생성을 진행한다.
+[deno deploy projects](https://dash.deno.com/projects) 페이지에서 `+ New Project` 버튼을
+눌러서 새로운 프로젝트를 생성을 진행한다.
 
 Github repository를 선택하고, branch 를 선택하고 project 이름을 작성하고 프로젝트를 생성한다.
 
